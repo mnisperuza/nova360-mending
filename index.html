@@ -66,14 +66,22 @@
         <div class="about-image-wrap reveal">
           <div class="image-index">02 / Nosotros</div>
           <img src="assets/WhatsApp%20Image%202026-09-23%20at%2012.10.27%20PM%20%281%29.jpeg" alt="Equipo y proyectos de Meding Metalmecánica" class="about-image">
-          <div class="image-stamp">M<br><span>15</span></div>
         </div>
         <div class="about-copy reveal reveal-delay">
           <p class="eyebrow"><span class="eyebrow-line"></span> Quiénes somos</p>
           <h2>Una mirada precisa.<br><em>Un equipo cercano.</em></h2>
           <p>Meding Metalmecánica S.A.S. desarrolla y ejecuta proyectos de estructuras y carpintería metálica, ajustándose a las necesidades de cada cliente.</p>
           <p>Somos un equipo que trabaja con compromiso, calidad y conocimiento para que cada proceso llegue tan lejos como la idea que lo originó.</p>
-          <a class="text-link" href="#contacto">Conoce nuestro enfoque <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#mision-vision">Conoce nuestro enfoque <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="purpose section-pad reveal" id="mision-vision" aria-labelledby="purpose-title">
+        <div class="section-kicker">Nuestro enfoque</div>
+        <h2 id="purpose-title">Lo que nos guía.</h2>
+        <div class="purpose-grid">
+          <article><span class="purpose-number">01 / PROPÓSITO</span><h3>Misión</h3><p>Apoyar al sector industrial mediante el suministro y la ejecución de proyectos que respondan a las necesidades de cada cliente, con calidad y cumplimiento.</p></article>
+          <article><span class="purpose-number">02 / FUTURO</span><h3>Visión</h3><p>Ser una empresa innovadora que ofrece nuevas alternativas para cada proyecto, poniendo nuestra experiencia y conocimiento al servicio de los clientes.</p></article>
         </div>
       </section>
 
@@ -91,7 +99,7 @@
             <div class="service-icon">⌁</div>
             <h3>Estructuras<br>metálicas</h3>
             <p>Diseño, fabricación y montaje para espacios industriales, comerciales y arquitectónicos.</p>
-            <a href="#contacto" aria-label="Conocer más sobre estructuras metálicas">↗</a>
+            <a href="#estructuras-metalicas" aria-label="Conocer más sobre estructuras metálicas">Ver detalles <span aria-hidden="true">↗</span></a>
           </article>
           <article class="service-card reveal reveal-delay-short">
             <span class="service-number">02</span>
@@ -114,6 +122,19 @@
             <p>Protección y acabado uniforme para que el resultado conserve su carácter.</p>
             <a href="#contacto" aria-label="Conocer más sobre pintura electrostática">↗</a>
           </article>
+        </div>
+      </section>
+
+      <section class="structures section-pad reveal" id="estructuras-metalicas" aria-labelledby="structures-title">
+        <div class="structures-copy">
+          <div class="section-kicker">Nuestros servicios / 01</div>
+          <h2 id="structures-title">Estructuras metálicas.</h2>
+          <p>Desarrollamos estructuras metálicas a la medida de cada proyecto, desde el diseño y la fabricación hasta el montaje en obra para espacios industriales, comerciales y arquitectónicos.</p>
+          <a class="text-link" href="#contacto">Consulta por tu proyecto <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="structures-gallery" aria-label="Imágenes del equipo en obra">
+          <img src="assets/General.jpg.jpeg" alt="Equipo de Meding trabajando en una obra" loading="lazy">
+          <img src="assets/00-2.jpeg" alt="Integrantes del equipo de Meding trabajando en altura" loading="lazy">
         </div>
       </section>
 
@@ -160,6 +181,8 @@
       menuButton?.setAttribute('aria-expanded', 'false');
       nav.classList.remove('is-open');
     }));
+    if ('IntersectionObserver' in window) {
+    document.documentElement.classList.add('js');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -169,6 +192,7 @@
       });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+    }
   </script>
 </body>
 </html>
