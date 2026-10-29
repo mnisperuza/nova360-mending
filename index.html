@@ -9,6 +9,12 @@
 </head>
 <body>
   <div class="page-shell">
+    <section class="intro-animation" aria-label="Animación de presentación de Meding">
+      <video controls autoplay muted playsinline preload="metadata" aria-label="Animación de presentación de Meding Metalmecánica">
+        <source src="ani.mp4" type="video/mp4">
+        Tu navegador no puede reproducir este video.
+      </video>
+    </section>
     <header class="site-header">
       <a class="brand" href="#inicio" aria-label="Meding Metalmecánica, inicio">
         <img src="assets/WhatsApp%20Image%202026-09-23%20at%2012.10.27%20PM.jpeg" alt="Logo de Meding Metalmecánica">
@@ -170,6 +176,8 @@
     </footer>
   </div>
   <script>
+    const introVideo = document.querySelector('.intro-animation video');
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { introVideo.pause(); }
     const menuButton = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.main-nav');
     menuButton?.addEventListener('click', () => {
